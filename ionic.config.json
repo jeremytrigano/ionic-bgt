@@ -1,0 +1,7 @@
+{
+  "name": "ionic-bgt",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
