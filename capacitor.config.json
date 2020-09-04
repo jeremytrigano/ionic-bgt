@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "ionic-bgt",
+  "appId": "dev.octocode.bgt",
+  "appName": "Boardgames Tools",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

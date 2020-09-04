@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ tool.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ tool.title }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-item>
+      <ion-label>Add new player</ion-label>
+      <ion-input placeholder="Player Name" id="addPlayerName" value="">
+      </ion-input>
+      <ion-icon slot="end" ios="add-outline" md="add-sharp"
+        (click)="addPlayer()"></ion-icon>
+    </ion-item>
+    <ion-button *ngIf="players.length > 1" (click)="shufflePlayers()">Shuffle
+    </ion-button>
+    <ion-button color="warning" *ngIf="players.length > 0"
+      (click)="resetPlayers()">Reset
+    </ion-button>
+    <ion-list>
+      <div *ngFor="let player of players; let i = index">
+        <ion-item>
+          <ion-label *ngIf="modify !== player"><span *ngIf="shuffled">{{ i+1 }}
+              -
+            </span>{{ player }}
+          </ion-label>
+          <ion-input *ngIf="modify === player" [placeholder]="player"
+            [id]="player" [value]="player"></ion-input>
+          <ion-icon *ngIf="modify === player" slot="end" ios="checkmark-outline"
+            md="checkmark-sharp" (click)="modifyPlayer(i)">
+          </ion-icon>
+          <ion-icon *ngIf="modify !== player" slot="end" ios="pencil-outline"
+            md="pencil-sharp" (click)="modificationStart(i)">
+          </ion-icon>
+          <ion-icon *ngIf="modify !== player" slot="end" ios="trash-outline"
+            md="trash-sharp" (click)="deletePlayer(i)">
+          </ion-icon>
+        </ion-item>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>
