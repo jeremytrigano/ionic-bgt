@@ -8,7 +8,7 @@
 
           <ion-menu-toggle auto-hide="false"
             *ngFor="let tool of tools; let i = index">
-            <ion-item (click)="selectedIndex = i" routerDirection="root"
+            <ion-item (click)="openTool(i)" routerDirection="root"
               [routerLink]="[tool.url]" lines="none" detail="false"
               [class.selected]="selectedIndex == i">
               <ion-icon slot="start" [ios]="tool.icon + '-outline'"

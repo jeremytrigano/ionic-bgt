@@ -21,6 +21,31 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public tools = [
     {
+      title: 'Home',
+      url: '',
+      icon: 'home',
+    },
+    {
+      title: 'Dice Roll',
+      url: 'dice-roll',
+      icon: 'apps',
+    },
+    {
+      title: 'Gold Manager',
+      url: 'gold-manager',
+      icon: 'cash',
+    },
+    {
+      title: 'Life Counter',
+      url: 'life-counter',
+      icon: 'heart-circle',
+    },
+    {
+      title: 'Randomizer',
+      url: 'randomizer',
+      icon: 'contract',
+    },
+    {
       title: 'Turn Order',
       url: 'turn-order',
       icon: 'list',
@@ -66,10 +91,12 @@ export class AppComponent implements OnInit {
     } else {
       this.tool = this.tools[0];
     }
-    this.openTool();
+    this.openTool(this.selectedIndex);
   }
 
-  openTool() {
+  openTool(index = 0) {
+    this.tool = this.tools[index];
+    this.selectedIndex = index;
     const navigationExtras: NavigationExtras = {
       state: {
         tool: this.tool,

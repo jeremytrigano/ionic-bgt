@@ -10,9 +10,22 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TurnOrderComponent } from './tools/turn-order/turn-order.component';
+import { DiceRollComponent } from './tools/dice-roll/dice-roll.component';
+import { GoldManagerComponent } from './tools/gold-manager/gold-manager.component';
+import { LifeCounterComponent } from './tools/life-counter/life-counter.component';
+import { RandomizerComponent } from './tools/randomizer/randomizer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, TurnOrderComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    DiceRollComponent,
+    GoldManagerComponent,
+    LifeCounterComponent,
+    RandomizerComponent,
+    TurnOrderComponent,
+  ],
   entryComponents: [],
   imports: [
     BrowserModule,
