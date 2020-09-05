@@ -41,8 +41,6 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/bgt/",
-              "deployUrl": "/bgt/",
               "fileReplacements": [{
                 "replace": "src/environments/environment.ts",
                 "with": "src/environments/environment.prod.ts"

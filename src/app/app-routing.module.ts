@@ -4,14 +4,15 @@ import { TurnOrderComponent } from './tools/turn-order/turn-order.component';
 
 const routes: Routes = [
   {
+    path: 'turn-order',
+    component: TurnOrderComponent,
+  },
+  {
     path: '',
     redirectTo: 'turn-order',
     pathMatch: 'full',
   },
-  {
-    path: 'turn-order',
-    component: TurnOrderComponent,
-  },
+  { path: '**', redirectTo: 'turn-order' },
 ];
 
 @NgModule({
