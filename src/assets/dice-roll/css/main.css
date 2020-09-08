@@ -1,0 +1,70 @@
+#svg *,
+.svg * {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#waitform {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    cursor: wait;
+}
+
+a {
+    color: gray;
+}
+
+em {
+    border: 1px rgba(0, 0, 0, 0.2) solid;
+    font-style: normal;
+    padding: 0px 3px;
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia;
+}
+
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0px;
+}
+
+p {
+    font-size: 80%;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.control_panel {
+    padding: 15px;
+    padding-bottom: 0px;
+    position: absolute;
+    z-index: 10;
+}
+
+#disclaimer {
+    color: black;
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 0;
+    right: 1em;
+}
+
+#container-info {
+    padding-bottom: 0.5em;
+}

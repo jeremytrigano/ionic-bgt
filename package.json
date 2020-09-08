@@ -1,8 +1,8 @@
 {
-  "name": "ionic-bgt",
+  "name": "Boardgames Tools",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Jeremy Trigano",
+  "homepage": "https://bgt.octocode.dev/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -26,6 +26,7 @@
     "@ionic/angular": "^5.0.0",
     "cordova-android": "9.0.0",
     "cordova-browser": "6.0.0",
+    "resize-observer-polyfill": "^1.5.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
@@ -60,7 +61,7 @@
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
   },
-  "description": "An Ionic project",
+  "description": "Tools for Boardgames",
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},

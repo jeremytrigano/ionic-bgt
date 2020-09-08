@@ -15,7 +15,34 @@
   </ion-header>
 
   <div id="container">
-    <p>
-      {{ tool.title }} soon!
-    </p>
+    <div id="container-info">
+      <div id="info_div" style="display: none">
+        <div class="center_field">
+          <span id="label"></span>
+        </div>
+        <div class="center_field">
+          <div class="bottom_field">
+            <span id="labelhelp">Click to continue or tap and drag again</span>
+          </div>
+        </div>
+      </div>
+      <div id="selector_div" style="display: none">
+        <div class="center_field">
+          <div id="sethelp">
+            Choose your dice set by direct input of
+            notation,<br />
+            Tap and drag on free space of screen or hit throw button to roll
+          </div>
+        </div>
+        <div class="center_field">
+          <input type="text" id="set" value="1d4 + 3d6 + 1d10 + 1d100"><br />
+          <button id="clear">Clear</button>
+          <button style="margin-left: 0.6em" id="throw">Throw</button>
+        </div>
+      </div>
+    </div>
+    <div id="canvas" resizeObserver></div>
+    <small id="disclaimer">Design by <a
+        href="http://www.teall.info/2014/01/online-3d-dice-roller.html"
+        target="_blank">Anton Natarov</a></small>
   </div>
